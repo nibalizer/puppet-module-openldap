@@ -1,6 +1,6 @@
-module-openldap
+puppet-module-openldap
 
-This is the module-openldap module.
+This is the pdxcat openldap module
 
 License
 -------
