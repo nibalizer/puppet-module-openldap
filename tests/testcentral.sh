@@ -5,7 +5,8 @@
 # own clean host to go to. You could also take the time here to provision/snap-
 # -shot the same host, its up to you, my version uses lxcs
 
-tests[0]='basic.pp/10.0.3.11'
+tests[0]='basic.pp/10.0.3.12'
+tests[1]='args.pp/10.0.3.13'
 
 for tst in ${tests[@]}
 do
@@ -17,7 +18,9 @@ do
   if [ $? = 0 ]; then
     :
   else
-    exit "Tests failed"
+    echo "Test $testfile failed"
+    echo "You may want to ssh into $ip_addr to see what happened"
+    exit 1
   fi
 done
 
