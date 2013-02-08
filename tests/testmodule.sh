@@ -30,6 +30,7 @@ if [ $? = 0 ]; then
 else
   popd
   echo "Tests failed :("
+  exit 1
 fi
 
 
