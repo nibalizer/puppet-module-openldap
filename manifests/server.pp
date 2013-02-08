@@ -3,6 +3,7 @@ class openldap::server (
   $manage_packages = 'true',
   $service_ensure  = enabled
 ){
+  include openldap::params
 
   if $manage_packages == 'true' {
 
@@ -12,8 +13,8 @@ class openldap::server (
     }
 
     class { 'openldap::server::utils':
-      package_ensure  => $package_ensure,
       manage_packages => $manage_packages,
+      package_ensure  => $package_ensure,
     }
 
   }

@@ -1,6 +1,7 @@
-class openldap::server::util(
-  $manage_packages = "true"
-  $package_ensure  = installed,
+#class to bring in ldap 'extras'
+class openldap::server::utils (
+  $manage_packages = "true",
+  $package_ensure = installed
 ){
 
   if $operatingsystem == "Ubuntu" {
