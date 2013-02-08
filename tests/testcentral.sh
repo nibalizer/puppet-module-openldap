@@ -8,6 +8,7 @@
 tests[0]='basic.pp/10.0.3.12'
 tests[1]='args.pp/10.0.3.13'
 
+
 for tst in ${tests[@]}
 do
   testfile=`echo $tst | cut -d '/' -f 1`
@@ -25,8 +26,4 @@ do
 done
 
 echo "All Tests pass"
-
-
-
-
 
