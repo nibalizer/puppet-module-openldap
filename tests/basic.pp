@@ -6,3 +6,6 @@ node default {
   }
 
 }
+
+#!pgrep -lf slapd > /dev/null
+#!ls /etc/ldap/ldap.conf > /dev/null
